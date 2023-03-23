@@ -40,7 +40,7 @@ void wyswietlanie(string** mapa, int w,int k)
 }
 
 
-void symulacja2(string** mapa, int norax, int noray, int zx, int zy, int wiersz, int kolumna)
+void symulacja(string** mapa, int norax, int noray, int zx, int zy, int wiersz, int kolumna)
 {
     int skoki[8][2] = { {1,2 },{1,-2},{-1,2},{-1,-2},{2,1},{2,-1},{-2,1},{-2,-1} };
     int pola[1000][2];
@@ -148,7 +148,7 @@ int main()
    
     wczytywanie_znakow(mapa, w, k, pozycjax,pozycjay, norax,noray);
           
-   symulacja2(mapa,norax,noray,pozycjax,pozycjay,w,k);
+   symulacja(mapa,norax,noray,pozycjax,pozycjay,w,k);
    
     
    for (int i = 0;i < w;i++)
